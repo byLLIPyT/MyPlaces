@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ABF9DBFB234452B30045F7F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9DBFA234452B30045F7F2 /* MainViewController.swift */; };
+		ABF9DBFD234502D00045F7F2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9DBFC234502D00045F7F2 /* CustomTableViewCell.swift */; };
 		ABFA692B23439F69003B3AB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFA692A23439F69003B3AB8 /* AppDelegate.swift */; };
 		ABFA692D23439F69003B3AB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFA692C23439F69003B3AB8 /* SceneDelegate.swift */; };
 		ABFA693223439F69003B3AB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFA693023439F69003B3AB8 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		ABF9DBFA234452B30045F7F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ABF9DBFC234502D00045F7F2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		ABFA692723439F69003B3AB8 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFA692A23439F69003B3AB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFA692C23439F69003B3AB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				ABFA692C23439F69003B3AB8 /* SceneDelegate.swift */,
 				ABF9DBFA234452B30045F7F2 /* MainViewController.swift */,
 				ABFA693023439F69003B3AB8 /* Main.storyboard */,
+				ABF9DBFC234502D00045F7F2 /* CustomTableViewCell.swift */,
 				ABFA693323439F6B003B3AB8 /* Assets.xcassets */,
 				ABFA693523439F6B003B3AB8 /* LaunchScreen.storyboard */,
 				ABFA693823439F6B003B3AB8 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				ABF9DBFB234452B30045F7F2 /* MainViewController.swift in Sources */,
 				ABFA692B23439F69003B3AB8 /* AppDelegate.swift in Sources */,
+				ABF9DBFD234502D00045F7F2 /* CustomTableViewCell.swift in Sources */,
 				ABFA692D23439F69003B3AB8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
