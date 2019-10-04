@@ -6,14 +6,16 @@
 //  Copyright © 2019 Александр Уткин. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
 
 struct Place {
     
     var name: String
-    var location: String
-    var type: String
-    var image: String
+    var location: String?
+    var type: String?
+    var image: UIImage?
+    var Restourantimage: String?
     
     
 }

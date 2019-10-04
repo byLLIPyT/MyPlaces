@@ -10,26 +10,25 @@ import UIKit
 
 class MainViewController: UITableViewController {
    
-    let places = [
-        Place(name: "Burger Heroes", location: "Alanya", type: "Cafe", image: "Burger Heroes"),
-        Place(name: "Kitchen", location: "Alanya", type: "Cafe", image: "Kitchen"),
-        Place(name: "Bonsai", location: "Alanya", type: "Cafe", image: "Bonsai"),
-        Place(name: "Дастархан", location: "Alanya", type: "Cafe", image: "Дастархан"),
-        Place(name: "Индокитай", location: "Alanya", type: "Cafe", image: "Индокитай"),
-        Place(name: "X.O", location: "Alanya", type: "Cafe", image: "X.O"),
-        Place(name: "Sherlock Holmes", location: "Alanya", type: "Cafe", image: "Sherlock Holmes"),
-        Place(name: "Speak Easy", location: "Alanya", type: "Cafe", image: "Speak Easy"),
-        Place(name: "Morris Pub", location: "Alanya", type: "Cafe", image: "Morris Pub"),
-        Place(name: "Вкусные истории", location: "Alanya", type: "Cafe", image: "Вкусные истории"),
-        Place(name: "Классик", location: "Alanya", type: "Cafe", image: "Классик"),
-        Place(name: "Love&Life", location: "Alanya", type: "Cafe", image: "Love&Life"),
-        Place(name: "Шок", location: "Alanya", type: "Cafe", image: "Шок"),
-        Place(name: "Бочка", location: "Alanya", type: "Cafe", image: "Бочка")
+    var places = [
+        Place(name: "Burger Heroes", location: "Alanya", type: "Cafe", Restourantimage: "Burger Heroes"),
+        Place(name: "Kitchen", location: "Alanya", type: "Cafe", Restourantimage: "Kitchen"),
+        Place(name: "Bonsai", location: "Alanya", type: "Cafe", Restourantimage: "Bonsai"),
+        Place(name: "Дастархан", location: "Alanya", type: "Cafe", Restourantimage: "Дастархан"),
+        Place(name: "Индокитай", location: "Alanya", type: "Cafe", Restourantimage: "Индокитай"),
+        Place(name: "X.O", location: "Alanya", type: "Cafe", Restourantimage: "X.O"),
+        Place(name: "Sherlock Holmes", location: "Alanya", type: "Cafe", Restourantimage: "Sherlock Holmes"),
+        Place(name: "Speak Easy", location: "Alanya", type: "Cafe", Restourantimage: "Speak Easy"),
+        Place(name: "Morris Pub", location: "Alanya", type: "Cafe", Restourantimage: "Morris Pub"),
+        Place(name: "Вкусные истории", location: "Alanya", type: "Cafe", Restourantimage: "Вкусные истории"),
+        Place(name: "Классик", location: "Alanya", type: "Cafe", Restourantimage: "Классик"),
+        Place(name: "Love&Life", location: "Alanya", type: "Cafe", Restourantimage: "Love&Life"),
+        Place(name: "Шок", location: "Alanya", type: "Cafe", Restourantimage: "Шок"),
+        Place(name: "Бочка", location: "Alanya", type: "Cafe", Restourantimage: "Бочка")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 
@@ -41,10 +40,19 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
                
-        cell.ImageOfPlace.image = UIImage.init(named: places[indexPath.row].image)
-        cell.NameLabel.text = places[indexPath.row].name
-        cell.locationLabel.text = places[indexPath.row].location
-        cell.typeLabel.text = places[indexPath.row].type
+        let place = places[indexPath.row]
+        
+        
+        cell.NameLabel.text = place.name
+        cell.locationLabel.text = place.location
+        cell.typeLabel.text = place.type
+        
+        if place.image == nil {
+                cell.ImageOfPlace.image = UIImage.init(named: place.Restourantimage!)
+        }else {
+            cell.imageView?.image = place.image
+        }
+        
         cell.ImageOfPlace.clipsToBounds = true
         cell.ImageOfPlace.layer.cornerRadius = cell.ImageOfPlace.frame.size.height / 2
         return cell
@@ -60,7 +68,10 @@ class MainViewController: UITableViewController {
     }
     */
 
-    @IBAction func cancelAction(_ segue: UIStoryboardSegue) {
-        
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        guard let newPlaceVC = segue.source as? NewPlaceViewController else { return }
+        newPlaceVC.saveNewPlace()
+        places.append(newPlaceVC.newPlace!)
+        tableView.reloadData()
     }
 }

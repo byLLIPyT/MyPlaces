@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91BFC3DDFD4A00CD7620FC3A /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6BE08B4A37BCBC7F5B8F20 /* Pods_MyPlaces.framework */; };
 		ABF9DBFB234452B30045F7F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9DBFA234452B30045F7F2 /* MainViewController.swift */; };
 		ABF9DBFD234502D00045F7F2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9DBFC234502D00045F7F2 /* CustomTableViewCell.swift */; };
 		ABF9DBFF234511560045F7F2 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9DBFE234511560045F7F2 /* PlaceModel.swift */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32EE5FD88C127DF0761DFCBA /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
+		7AF0A8BBCC9F3EE492C225AE /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		ABF9DBFA234452B30045F7F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ABF9DBFC234502D00045F7F2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		ABF9DBFE234511560045F7F2 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		ABFA693323439F6B003B3AB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABFA693623439F6B003B3AB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABFA693823439F6B003B3AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6BE08B4A37BCBC7F5B8F20 /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91BFC3DDFD4A00CD7620FC3A /* Pods_MyPlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				ABFA692923439F69003B3AB8 /* MyPlaces */,
 				ABFA692823439F69003B3AB8 /* Products */,
+				CF1DBF7E076A6D6383B3E8C7 /* Pods */,
+				B4DEDBF9728A667E173E9F33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = MyPlaces;
 			sourceTree = "<group>";
 		};
+		B4DEDBF9728A667E173E9F33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF6BE08B4A37BCBC7F5B8F20 /* Pods_MyPlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1DBF7E076A6D6383B3E8C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AF0A8BBCC9F3EE492C225AE /* Pods-MyPlaces.debug.xcconfig */,
+				32EE5FD88C127DF0761DFCBA /* Pods-MyPlaces.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABFA693B23439F6B003B3AB8 /* Build configuration list for PBXNativeTarget "MyPlaces" */;
 			buildPhases = (
+				7CBCDA729E3DCC30FDA70CC2 /* [CP] Check Pods Manifest.lock */,
 				ABFA692323439F69003B3AB8 /* Sources */,
 				ABFA692423439F69003B3AB8 /* Frameworks */,
 				ABFA692523439F69003B3AB8 /* Resources */,
+				9C78412106D290B4510C7CAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CBCDA729E3DCC30FDA70CC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyPlaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C78412106D290B4510C7CAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPlaces/Pods-MyPlaces-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPlaces/Pods-MyPlaces-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPlaces/Pods-MyPlaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABFA692323439F69003B3AB8 /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		ABFA693C23439F6B003B3AB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AF0A8BBCC9F3EE492C225AE /* Pods-MyPlaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +382,7 @@
 		};
 		ABFA693D23439F6B003B3AB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32EE5FD88C127DF0761DFCBA /* Pods-MyPlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
